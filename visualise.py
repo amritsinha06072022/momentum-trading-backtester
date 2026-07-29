@@ -30,9 +30,22 @@ Dependencies: pandas, numpy, matplotlib
 
 import matplotlib.pyplot as plt
 import pandas as pd
+from pathlib import Path
+import os
 
 # A clean, readable style. 'seaborn-v0_8-darkgrid' ships with matplotlib;
 # fall back gracefully if the name differs across versions.
+
+FIG_DIR = Path(__file__).parent / "figures"
+FIG_DIR.mkdir(exist_ok=True)
+
+if os.path.exists("equity_curve.png"):
+    os.remove("equity_curve.png")
+
+if os.path.exists("price_signals.png"):
+    os.remove("price_signals.png")
+
+
 try:
     plt.style.use("seaborn-v0_8-darkgrid")
 except OSError:
@@ -42,7 +55,7 @@ except OSError:
 def plot_price_signals(df: pd.DataFrame,
                        trades: pd.DataFrame,
                        ticker: str = "AAPL",
-                       save_path: str = "price_signals.png") -> None:
+                       save_path: Path = FIG_DIR / "price_signals.png") -> None:
     """Plot price + moving averages with executed buy/sell markers.
 
     df     : DataFrame with 'Close', 'SMA_fast', 'SMA_slow' (from Phase 2).
@@ -81,7 +94,7 @@ def plot_price_signals(df: pd.DataFrame,
 def plot_equity_curve(results: pd.DataFrame,
                       bh_equity: pd.Series,
                       initial_capital: float = 10_000.0,
-                      save_path: str = "equity_curve.png") -> None:
+                      save_path: Path = FIG_DIR / "equity_curve.png") -> None:
     """Plot strategy equity vs. buy-and-hold, with drawdown periods shaded.
 
     results   : per-day results from the engine (needs 'Equity' column).
