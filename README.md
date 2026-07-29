@@ -13,7 +13,7 @@ The short answer, on 10 years of Apple (AAPL) data: **no — and the *why* is th
 Momentum trading rests on a simple idea borrowed from physics: *an object in motion tends to stay in motion.* Assets that have recently trended up are assumed to keep trending up. The textbook way to trade this is the **moving-average crossover**:
 
 - Compute a fast (50-day) and slow (200-day) moving average of price.
-- When the fast average crosses **above** the slow one (a "Golden Cross"), go long.
+- When the fast average crosses **above** the slow average (a "Golden Cross"), go long.
 - When it crosses **below** (a "Death Cross"), exit to cash.
 
 The hypothesis under test: *following these signals should outperform passively holding the asset, or at least deliver a smoother, less risky ride.*
