@@ -13,7 +13,7 @@ The short answer, on 10 years of Apple (AAPL) data: **no — and the *why* is th
 Momentum trading rests on a simple idea borrowed from physics: *an object in motion tends to stay in motion.* Assets that have recently trended up are assumed to keep trending up. The textbook way to trade this is the **moving-average crossover**:
 
 - Compute a fast (50-day) and slow (200-day) moving average of price.
-- When the fast average crosses **above** the slow one (a "Golden Cross"), go long.
+- When the fast average crosses **above** the slow average (a "Golden Cross"), go long.
 - When it crosses **below** (a "Death Cross"), exit to cash.
 
 The hypothesis under test: *following these signals should outperform passively holding the asset, or at least deliver a smoother, less risky ride.*
@@ -40,9 +40,9 @@ A moving-average crossover is a **lagging** indicator by construction — it con
 
 - **It buys late.** The Golden Cross fires well after the bottom, so entries often land near local highs.
 - **It sells late.** The Death Cross fires well after the top, so the strategy rides a chunk of each decline down before exiting.
-- **Worst case — it sold low and bought back higher.** During the 2025 selloff the strategy exited near a trough (~$171) and had to re-enter months later at a much higher price (~$237). Buy-and-hold simply held through the dip and recovered.
+- **Worst case — it sold low and bought back higher.** During the 2025 selloff the strategy exited near a trough (approximately $171) and had to re-enter months later at a much higher price (approximately $237). Buy-and-hold simply held through the dip and recovered.
 
-The strategy's own trade log tells the story: **a 40% win rate carried almost entirely by one enormous winner** (the 2019–2022 hold, worth ~$18,000), with the other trades bleeding money on whipsaws and late exits. That low-win-rate, few-big-winners profile is characteristic of trend-following — but on this asset the winners weren't enough to overcome the cost of the lag.
+The strategy's own trade log tells the story: **a 40% win rate carried almost entirely by one enormous winner** (the 2019–2022 hold, worth approximately $18,000), with the other trades bleeding money on whipsaws and late exits. That low-win-rate, few-big-winners profile is characteristic of trend-following — but on this asset the winners weren't enough to overcome the cost of the lag.
 
 ![Price, Moving Averages & Trade Signals](figures/price_signals.png)
 
